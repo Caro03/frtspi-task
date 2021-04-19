@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 0cc15eea-0b40-4abb-b128-75eeaa8d5907 # Detail Expert
+handle: diseases
+instructions: ''
+name: Diseases
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:1d3688b2-b983-4590-a6eb-55f1c13f1b38' # Diseases
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

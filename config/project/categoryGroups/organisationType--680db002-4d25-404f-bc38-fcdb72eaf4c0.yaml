@@ -1,0 +1,48 @@
+fieldLayouts:
+  07752db0-334e-4639-a760-e622962192fa:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: organisationType
+name: 'Organisation Type'
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+structure:
+  maxLevels: null
+  uid: 40bb45ec-63e1-4d33-9729-7dfa1af88c60

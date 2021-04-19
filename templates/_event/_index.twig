@@ -1,0 +1,58 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+		{% include '_snippet/_content/_pageTitle' %}
+		{% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+    <h2 class="text-primary font-serif">The SPIN congress</h2>
+    <div class="text-white bg-center bg-cover hero js-bg-target px-10 py-10">
+        {% set newEvent = craft.entries.section('eventUpcomingDetail').isFuture('practicalInfoDate').limit(1) %}
+        {% for new in newEvent %}
+            {% include '_snippet/_item/_congress' %}
+        {% endfor %}
+    </div>
+    </div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+        <div class="flex items-baseline">
+            <h2 class="text-primary mr-10">Past SPIN congresses</h2>
+            {% set pasts = craft.entries.section('pastCongresses') %}
+            {% for past in pasts %}
+                <a class="btn btn--ghost btn--ext" href="{{ past.url }}">See all past SPIN congresses</a>
+            {% endfor %}
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+        {% set UpcomingEvent = craft.entries.section('eventUpcomingDetail').isPast('practicalInfoDate').limit(3) %}
+        {% for upcoming in UpcomingEvent %}
+            {% include '_snippet/_item/_event' %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+        <h2 class="text-primary">Other events</h2>
+            <div class="flex -mx-4">
+                {% set newEvent = craft.entries.section('newEvent').limit(3) %}
+                {% for new in newEvent %}
+                    {% include '_snippet/_item/_newEvent' %}
+                {% endfor %}
+    </div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+{% endblock %}

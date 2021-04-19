@@ -1,0 +1,81 @@
+fieldLayouts:
+  1d3c3f6d-c2ce-4142-877d-2357e587a449:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 16a93198-5cb7-47c9-83d2-10f1a57f2d2c # OrganisationName
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ce4d64f-c77a-4054-9241-13f8db34cb8c # Street
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7b23c792-f58b-47aa-beac-b4246f230f2b # Housenumber
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 697893d6-3d38-44f2-ab68-5991cdec0234 # Zip
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c2a99aeb-0a21-4ade-a0ed-57d043e41517 # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ab9dbe60-5ede-48a7-8b96-1a5658f0c47b # Country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8a472db7-8308-4bc6-a029-33d177091147 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f6025814-bb10-4540-9603-263d5a4cf843 # Telephone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Info
+        sortOrder: 1
+handle: info
+name: Info

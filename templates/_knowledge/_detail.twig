@@ -1,0 +1,30 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+		{% include '_snippet/_content/_pageTitle' %}
+		{% include '_snippet/_content/_intro' %}
+        <p class="mt-5">{{ entry.nameSpeaker }}</p>
+        <p>{{ entry.dateCongress|date('long') }}</p>
+    </div>
+</div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+<div class="section section--default">
+	<div class="container">
+        <h2 class="text-primary">Other items you might be interested in</h2>
+        <div class="flex flex-wrap -mx-4">
+            {% for congresses in craft.entries.section('knowledgeCenterDetail').relatedTo(entry.topic).id('not ' ~ entry.id).limit(3) %}
+                {% include '_snippet/_item/_knowledgeDetail' %}
+            {% endfor %}
+    </div> 
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+    <div class="section section--default">
+        <div class="container">
+        <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+            {% include '_snippet/_content/_pageTitle' %}
+            {% include '_snippet/_content/_intro' %}
+        </div>
+    </div>
+</div>
+
+<div class="section section--default">
+    <div class="bg-light py-10 px-10 ml-10 mr-10">
+	    <div class="container">
+            <h2 class="text-primary">Main project information</h2>
+            <p class="font-bold">Period</p>
+            <p>{{ entry.period }}</p>
+            <p class="font-bold">Project lead</p>
+            <p>{{ entry.projectLead }}</p>
+            <p class="font-bold">Project Team</p>
+            <p>{{ entry.projectTeam }}</p>
+        </div>
+    </div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+{% endblock %}

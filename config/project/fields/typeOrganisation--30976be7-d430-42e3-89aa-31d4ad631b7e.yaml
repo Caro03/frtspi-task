@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 0cc15eea-0b40-4abb-b128-75eeaa8d5907 # Detail Expert
+handle: typeOrganisation
+instructions: ''
+name: 'Type Organisation'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:680db002-4d25-404f-bc38-fcdb72eaf4c0' # Organisation Type
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,41 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+		{% include '_snippet/_content/_pageTitle' %}
+		{% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+<div class="section section--default">
+    <div class="container">
+        {% set lists = craft.entries.section('representativeList') %}
+        {% for list in lists %}
+            <h2 class="text-primary">{{ list.title }}</h2>
+            <p>{{ list.intro }}</p>
+            <div class="bg-light px-10 py-10 w-full mb-10">
+            <table width="100%">
+                <tr class="text-left border-b-1 border-primary">
+                    <th class="pb-2">Country</th>
+                    <th class="pb-2">Representative</th>
+                    <th class="pb-2">Contact</th>
+                </tr>  
+                {% for table in list.list %}          
+                    <tr class="pr-5">
+                        <td class="pb-2">{{ table.country }}</td>
+                        <td class="pb-2">{{ table.representative }}</td>
+                        <td class="pb-2">{{ table.contact }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

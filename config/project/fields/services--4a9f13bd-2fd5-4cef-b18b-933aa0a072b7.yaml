@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 0cc15eea-0b40-4abb-b128-75eeaa8d5907 # Detail Expert
+handle: services
+instructions: ''
+name: Services
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:e7ce49eb-5e0a-435e-b051-dfca04794216' # Services
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

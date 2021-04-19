@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 767fbb17-acfa-4071-97b2-54e2c728dd4b # Event upcoming
+handle: practicalInfoTitle
+instructions: ''
+name: 'Practical Info Title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

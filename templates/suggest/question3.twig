@@ -1,0 +1,151 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+  <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% set suggestion = craft.entries.section('suggestExpert') %}
+        {% for suggest in suggestion %}
+            <h1 class="text-primary w-3/5">{{ suggest.title }}</h1>
+        <div class="text-xl w-3/5">
+            <p>{{ suggest.intro }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+    <div class="bg-light ml-10 mr-10 py-10">
+        
+<div class="w-full py-6">
+  <div class="flex justify-center">
+    <div class="w-32">
+      <div class="relative mb-2">
+        <div class="w-12 h-12 mx-auto bg-primary rounded-full text-lg text-white flex items-center">
+          <span class="text-center text-white w-full">
+            <p class="font-accent">1</p>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w-32">
+      <div class="relative mb-2">
+        <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
+          <div class="w-full bg-white items-center align-middle align-center">
+            <div class="w-0 bg-white border-height"></div>
+          </div>
+        </div>
+
+        <div class="w-12 h-12 mx-auto bg-primary rounded-full text-lg text-primary flex items-center">
+          <span class="text-center text-white w-full">
+            <p class="font-accent">2</p>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w-32">
+      <div class="relative mb-2">
+        <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
+          <div class="w-full bg-white items-center align-middle align-center flex-1">
+            <div class="w-0 bg-white border-height"></div>
+          </div>
+        </div>
+
+        <div class="w-12 h-12 mx-auto bg-primary rounded-full text-lg text-white flex items-center">
+          <span class="text-center text-white w-full">
+            <p class="font-accent">3</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% set id = craft.app.request.getParam('id') %}
+
+{% set diseases = craft.categories.group('diseases').all() %}
+{% set services = craft.categories.group('services').all() %}
+{% set collaborations = craft.categories.group('collaboration').all() %}
+{% set projects = craft.categories.group('projects').all() %}
+
+<div class="flex justify-center">
+  <form method="post" accept-charset="UTF-8">
+
+  {{ csrfInput() }}
+  {{ actionInput('statik/form/submit') }}
+  {{ hiddenInput('entryId', id) }}
+  {{ hiddenInput('sectionUid', '8686965a-70d6-43fa-9981-0c699bc62f2a') }}
+  {{ hiddenInput('typeUid', '8518fc8e-40c7-4e48-a521-e48866d184b1') }}
+
+  <div class="px-10 py-5">
+    <div class="mb-2">
+        <label class="form__label text-xl" for="diseases">Diseases</label>
+    </div>
+        {% for diseas in diseases %}
+        <div class="pb-2">
+          <input type="checkbox" id="diseases" name="fields[diseases][]" value="{{ diseas.id }}">
+          <label for="diseases">{{ diseas.title }}</label><br>
+        </div>
+        {% endfor %}
+
+    <div class="mb-2 mt-5">
+        <label class="form__label text-xl" for="services">Services</label>
+    </div>
+        {% for service in services %}
+        <div class="pb-2">
+          <input type="checkbox" id="services" name="fields[services][]" value="{{ service.id }}">
+          <label for="services">{{ service.title }}</label><br>
+        </div>
+        {% endfor %}
+
+      <div class="mb-2 mt-5">
+        <label class="form__label text-xl" for="services">Collaboration and projects</label>
+      </div>
+        <p class="w-64 text-primary">Is your dermatology centre connected to an official national working group? <span class="tooltip" data-tooltip="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ">&#x1F6C8;</span><p>
+        {% set collaborationOtherArray = [] %}
+        {% for collaboration in collaborations %}
+        {% if collaboration.otherPleaseSpecify == 1 %}
+        {% set collaborationOtherArray = collaborationOtherArray|merge([collaboration.id]) %}
+        {% endif %}
+        <div class="w-64 pb-2">
+          <input type="radio" id="{{ collaboration.id }}" name="fields[collaboration][]" value="{{ collaboration.id }}">
+          <label for="{{ collaboration.id }}">{{ collaboration.title }}</label><br>
+        </div>
+
+        {% endfor %}
+        
+        <div class="hidden my-4 js-form-optional-block" data-controller-value="{{ collaborationOtherArray|json_encode }}" data-controller-name="fields[collaboration][]" data-clear-all-on-hide="true">
+						<input class="form__input" name="fields[collaborationName]" id="optionalContent3" type="text"/>
+				</div>
+
+        <p class="w-64 text-primary">Are there any projects running in your country on the chronic inflammatory skin disease(s) you are specialized in and regarding the topics list below?<p>
+        {% for project in projects %}
+        <div class="w-full pb-2">
+          <input type="checkbox" id="extraContent" name="fields[projects][]" value="{{ project.id }}">
+          <label for="extraContent">{{ project.title }}</label><br>
+        </div>
+
+        <div class="hidden my-4 js-form-optional-block" data-controller-value="{{ project.id }}" data-controller-name="fields[projects][]" data-clear-all-on-hide="true">
+						<input class="form__input" name="fields[projects]" id="optionalContent3" type="text" required/>
+				</div>
+        {% endfor %}
+
+        <div class="flex justify-end">
+          <input class="mt-5 btn btn--secondary btn--ext" type="submit" value="Submit">
+        </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

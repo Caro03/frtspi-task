@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 3a08910b-137a-497e-aea4-44fe0937bcc7 # Knowledge Detail
+handle: dateCongress
+instructions: ''
+name: 'Date Congress'
+searchable: true
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

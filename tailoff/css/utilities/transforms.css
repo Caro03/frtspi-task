@@ -1,0 +1,5 @@
+@responsive {
+  .pull-to-center {
+    transform: translate(-50%, -50%);
+  }
+}

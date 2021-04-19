@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a49c69b9-ced8-415b-a23a-f0589358d3b6 # Categories
+handle: organisationType
+instructions: ''
+name: 'Organisation Type'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:680db002-4d25-404f-bc38-fcdb72eaf4c0' # Organisation Type
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

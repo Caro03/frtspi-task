@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a49c69b9-ced8-415b-a23a-f0589358d3b6 # Categories
+handle: topic
+instructions: ''
+name: Topic
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:5b8e4a10-4100-4243-9846-6af9e1833dc3' # Topic
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

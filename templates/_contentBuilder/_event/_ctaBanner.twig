@@ -1,0 +1,19 @@
+<div class="section section--default">
+<div class="container">
+<div class="bg-primary text-primary-contrast px-16 py-10">
+<div>
+<h2 class="text-center">{{ block.titel }}<h2>
+</div>
+
+{% if block.introduction %}
+<div>
+    <p class="pb-5 text-center">{{ block.introduction }}</p>
+</div>
+{% endif %}
+
+<div class="text-center">
+<a class="btn btn--primary btn--ext" href="{{ block.cta }}">{{ block.cta.text }}</a>
+</div>
+</div>
+</div>
+</div>

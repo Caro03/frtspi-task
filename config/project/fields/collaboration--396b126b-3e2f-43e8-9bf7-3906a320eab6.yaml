@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a49c69b9-ced8-415b-a23a-f0589358d3b6 # Categories
+handle: collaboration
+instructions: ''
+name: Collaboration
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:c8b0aae9-5078-4493-8681-8650ac1078d9' # Collaboration
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

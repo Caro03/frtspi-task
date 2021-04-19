@@ -1,0 +1,73 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% include '_snippet/_content/_pageTitle' %}
+        {% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+<div class="section section--default">
+	<div class="container">
+    <h2 class="text-primary">Unmet needs</h2>
+    <div class="flex group">
+    <div class="group-hover:shadow-xl border border-primary w-1/4 h-64 px-5 py-5">
+        <h2 class="text-primary group-hover:text-white">Psoriasis</h2>
+        {% set category = craft.categories.group('diseases').title('Psoriasis') %}
+        {% set psoriasis = craft.entries.section('unmetNeedsDetail').relatedTo(category).limit(3) %}
+        {% for psor in psoriasis %}
+    <div class="mb-0.5">
+            <a href="{{ psor.url }}">{{ psor.title }}</a>
+    </div>
+        {% endfor %}
+        {% set details = craft.entries.section('unmetNeedsDisease').relatedTo(category) %}
+        {% for detail in details %}
+            <br><a class="link link--primary link--ext" href="{{ detail.url }}">Read more</a>
+        {% endfor %}
+    </div>
+
+    <div class="group-hover:shadow-xl border border-primary w-1/4 h-64 px-5 py-5 ml-5">
+        <h2 class="text-primary">Vitiligo</h2>
+        {% set category = craft.categories.group('diseases').title('Vitiligo') %}
+        {% set vitiligo = craft.entries.section('unmetNeedsDetail').relatedTo(category).limit(3) %}
+        {% for vit in vitiligo %}
+    <div class="mb-0.5">
+            <a href="{{ vit.url }}">{{ vit.title }}</a>
+    </div>
+        {% endfor %}
+        {% set details = craft.entries.section('unmetNeedsDisease').relatedTo(category) %}
+        {% for detail in details %}
+            <br><a class="link link--primary link--ext" href="{{ detail.url }}">Read more</a>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+    <h2 class="text-primary">Advancing projects</h2>
+    <div class="flex">
+            {% set projects = craft.entries.section('spinProjectDetail') %}
+            {% for project in projects %}
+                <div class="group w-1/4">
+                <div class="group-hover:shadow-xl border border-primary px-5 py-5 mr-5">
+                    <h2 class="text-primary">{{ project.title }}</h2>
+                    <p>{{ project.projectLead }}</p>
+                    <p>{{ project.intro }}</p>
+                    <a class="link link--primary link--ext" href="{{ project.url }}">Read more</a>
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+    </div>
+</div>
+
+{% endblock %}

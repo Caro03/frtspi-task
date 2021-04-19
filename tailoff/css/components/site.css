@@ -1,0 +1,29 @@
+/* purgecss start ignore */
+.full-service-nav {
+    position: relative;
+    &:before {
+        content: '';
+        left: 100%;
+        @apply block w-full absolute bg-light top-0 bottom-0 h-full;
+    }
+}
+
+.border-height {
+    height: 1.5px;
+}
+
+.center-title {
+    position: relative;
+        left: 50%;
+        @apply block w-full h-full ml-5;
+}
+
+.tooltip:hover {
+    position: relative;
+    &:after {
+        content: attr(data-tooltip);
+        left: 2.5em;
+        @apply absolute bg-white px-5 py-2 text-xs w-64 text-black;
+    }
+}
+/* purgecss end ignore */

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: cef9cd82-beb6-4be3-aa98-3155e9923888 # SPIN project
+handle: projectTeam
+instructions: ''
+name: 'Project Team'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

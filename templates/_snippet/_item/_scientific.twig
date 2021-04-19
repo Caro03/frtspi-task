@@ -1,0 +1,25 @@
+<div class="w-1/5 mx-4">
+    <div class="rounded bg-light mb-5 h-full">
+        <div class="bg-cover aspect-ratio-16/9 js-bg-target">
+            {% set optimizedImage = member.image|first.optimizedOverview %}
+        <picture>
+            {% if craft.imageOptimize.serverSupportsWebP() and member.image|first.extension != 'svg' %}
+                <source data-srcset="{{ optimizedImage.srcsetWebP() }}"
+                        sizes="(max-width: 479px) 99vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px"
+                        type="image/webp"/>
+            {% endif %}
+            <img src="{{ optimizedImage.placeholderBox() }}"
+                data-srcset="{{ optimizedImage.srcset() }}"
+                sizes="(max-width: 479px) 94vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px"
+                alt="{{ member.image|first.imageCaption ?? member.image|first.title ?? entry.title }}"
+                class="lazyload js-bg-src"/>
+        </picture>
+        </div>
+        <div class="p-4">
+            <h3 class="text-primary">{{ member.naam }}</h3>
+            <p class="italic">{{ member.function }}</p>
+            <p>{{ member.description }}</p>
+            <p class="font-bold"><span class="underline">Teams:</span> {{ member.teams }}</p>
+        </div>
+    </div>
+</div>

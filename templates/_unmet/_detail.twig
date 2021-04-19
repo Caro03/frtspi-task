@@ -1,0 +1,17 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% include '_snippet/_content/_pageTitle' %}
+        {% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+{% endblock %}

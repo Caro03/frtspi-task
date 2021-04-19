@@ -1,0 +1,36 @@
+enableVersioning: true
+handle: scientificCommittee
+name: 'Scientific Committee'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _about/_scientific
+    uriFormat: scientific-committee
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _about/_scientific
+    uriFormat: scientific-committee
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    enabledByDefault: true
+    hasUrls: true
+    template: _about/_scientific
+    uriFormat: scientific-committee
+structure:
+  maxLevels: null
+  uid: 2ad8fe05-5761-449d-8812-4426cd594471
+type: structure

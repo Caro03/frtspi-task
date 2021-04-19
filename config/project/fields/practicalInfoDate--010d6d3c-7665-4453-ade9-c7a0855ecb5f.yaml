@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 767fbb17-acfa-4071-97b2-54e2c728dd4b # Event upcoming
+handle: practicalInfoDate
+instructions: ''
+name: 'Practical Info Date'
+searchable: true
+settings:
+  endAfterStart: '1'
+  showEndTime: ''
+  showStartTime: ''
+  someAttribute: 'Some Default'
+translationKeyFormat: null
+translationMethod: none
+type: studioespresso\daterange\fields\DateRangeField

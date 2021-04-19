@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a49c69b9-ced8-415b-a23a-f0589358d3b6 # Categories
+handle: projects
+instructions: ''
+name: Projects
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:41188e8c-9625-4e26-901d-139a07977eec' # Projects
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,48 @@
+fieldLayouts:
+  3e7ba588-2e98-4ae8-8ab0-89a056c633e5:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: congress
+name: Congress
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: true
+    template: null
+    uriFormat: 'congress/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: true
+    template: null
+    uriFormat: 'congress/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: true
+    template: null
+    uriFormat: 'congress/{slug}'
+structure:
+  maxLevels: null
+  uid: 4c7b520c-8d4c-4b83-a188-370c3ecf3653

@@ -1,0 +1,48 @@
+fieldLayouts:
+  dedd79d1-d915-415e-9d14-69284cc9a530:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: projects
+name: Projects
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: true
+    template: null
+    uriFormat: 'projects/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: true
+    template: null
+    uriFormat: 'projects/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: true
+    template: null
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: null
+  uid: 3a3e7986-40d3-47d6-b3e5-a709f9f34794

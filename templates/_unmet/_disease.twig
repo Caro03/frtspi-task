@@ -1,0 +1,30 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% include '_snippet/_content/_pageTitle' %}
+        {% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+{% include '_snippet/_content/_contentBuilder' %}
+
+{% set diseases = craft.entries.section('unmetNeedsDetail').relatedTo(entry.diseases) %}
+<div class="section section--default">
+	<div class="container">
+        {% for disease in diseases %}
+        {% set category = disease.diseases.one() %}
+        <h2 class="text-primary">List of unmet needs {{ category.title }}</h2>
+    <div class="mb-0.5">
+        <a class="underline" href="{{ disease.url }}">{{ disease.title }}</a>
+    </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

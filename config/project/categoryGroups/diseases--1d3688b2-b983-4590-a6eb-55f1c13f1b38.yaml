@@ -1,0 +1,48 @@
+fieldLayouts:
+  96d9f3d0-5576-4437-88b2-622a8bad8047:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: diseases
+name: Diseases
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: true
+    template: null
+    uriFormat: 'diseases/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: true
+    template: null
+    uriFormat: 'diseases/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: true
+    template: null
+    uriFormat: 'diseases/{slug}'
+structure:
+  maxLevels: null
+  uid: eb2e3f49-d344-4aca-a905-ec2b0010caf4

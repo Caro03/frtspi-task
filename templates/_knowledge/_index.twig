@@ -1,0 +1,74 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% include '_snippet/_content/_pageTitle' %}
+        {% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+{% set topicquery = craft.app.request.getParam('topic') %}
+{% set articlequery = craft.app.request.getParam('articleType') %}
+
+{# filter topic #}
+{% set congresses = craft.entries.section('knowledgeCenterDetail') %}
+{% set relationParam = ['and'] %}
+
+{% if topicquery %}
+    {% set relationParam = relationParam|merge([{ targetElement: topicquery, field: 'topic' }]) %}
+{% endif %}
+
+{# filter articleType #}
+{% if articlequery %}
+    {% set relationParam = relationParam|merge([{ targetElement: articlequery, field: 'articleType' }]) %}
+{% endif %}
+
+{% if relationParam|length > 1 %}
+    {% set congresses = congresses.relatedTo(relationParam) %}
+{% endif %}
+
+<div class="section section--default">
+	<div class="container">
+        <div class="flex">
+        <div class="bg-light w-1/3 px-10 py-10 mr-5">
+            <div class="mb-4">
+                <h3 class="form__label">Topic</h3>
+                {% set topics = craft.categories.group('topic').all() %}
+            <form>
+                {% for topic in topics %}
+                    <input type="checkbox" id="{{ topic.id }}" name="topic[]" value="{{ topic.id }}" {% if topic.id in topicquery %} checked {% endif %}>
+                    <label for="{{ topic.id }}">{{ topic.title }}</label><br>
+                {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <h3 class="form__label">Type</h3>
+                {% set articles = craft.categories.group('articleType').all() %}
+            <form>
+                {% for article in articles %}
+                    <input type="checkbox" id="{{ article.id }}" name="articleType[]" value="{{ article.id }}" {% if article.id in articlequery %} checked {% endif %}>
+                    <label for="{{ article.id }}">{{ article.title }}</label><br>
+                {% endfor %}
+            </div>
+
+                <input class="btn btn--primary" type="submit" value="Filteren">
+            </form>
+        </div>
+
+    <div class="flex flex-wrap -mx-4">
+        {% for congress in congresses %}
+            {% include '_snippet/_item/_knowledge' %}
+        {% endfor %}
+    </div>    
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

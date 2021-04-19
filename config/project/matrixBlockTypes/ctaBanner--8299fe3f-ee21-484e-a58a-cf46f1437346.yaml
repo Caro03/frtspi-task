@@ -1,0 +1,140 @@
+field: d9ae24ec-fa05-4933-a9ac-ba5bb3d9d90a # CTA Banner
+fieldLayouts:
+  96bbd9a9-b14f-4d59-b1c6-3dd0ef98c7ee:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4357f338-4541-40bb-8d32-151da4da3f2c # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5241451e-a84b-4e63-84a7-2f1f5ffd1041 # Introduction
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 29ce1800-2284-4de0-a35b-d9b2b3217a36 # CTA
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  29ce1800-2284-4de0-a35b-d9b2b3217a36: # CTA
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: ''
+    name: CTA
+    searchable: true
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames: '*'
+      class: null
+      classes: null
+      defaultLinkName: asset
+      defaultText: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\cta\fields\CTAField
+  4357f338-4541-40bb-8d32-151da4da3f2c: # Titel
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5241451e-a84b-4e63-84a7-2f1f5ffd1041: # Introduction
+    contentColumnType: text
+    fieldGroup: null
+    handle: introduction
+    instructions: ''
+    name: Introduction
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: ctaBanner
+name: 'CTA Banner'
+sortOrder: 1

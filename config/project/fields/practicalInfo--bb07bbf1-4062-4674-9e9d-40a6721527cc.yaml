@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 767fbb17-acfa-4071-97b2-54e2c728dd4b # Event upcoming
+handle: practicalInfo
+instructions: ''
+name: 'Practical Info'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_practicalinfo}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

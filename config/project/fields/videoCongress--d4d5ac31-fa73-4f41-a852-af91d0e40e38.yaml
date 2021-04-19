@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 3a08910b-137a-497e-aea4-44fe0937bcc7 # Knowledge Detail
+handle: videoCongress
+instructions: 'Plak hier de embedded video'
+name: 'Video Congress'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: a49c69b9-ced8-415b-a23a-f0589358d3b6 # Categories
+handle: congress
+instructions: ''
+name: Congress
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:9d19412f-da6e-45ba-8cea-9902300d604f' # Congress
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

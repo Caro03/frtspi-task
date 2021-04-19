@@ -1,0 +1,57 @@
+fieldLayouts:
+  86003a13-c472-452f-bfc1-7309833a9fe8:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 43fb7756-98dd-4037-8609-2575a0aa4e25 # Other Please Specify
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: collaboration
+name: Collaboration
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: true
+    template: null
+    uriFormat: 'collaboration/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: true
+    template: null
+    uriFormat: 'collaboration/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: true
+    template: null
+    uriFormat: 'collaboration/{slug}'
+structure:
+  maxLevels: null
+  uid: 40c9c7a9-1cc2-4c1c-ab5a-f0013e0ae594

@@ -1,0 +1,182 @@
+fieldLayouts:
+  ca43764c-1bf4-4140-a6e0-7a8d596358c8:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30976be7-d430-42e3-89aa-31d4ad631b7e # Type Organisation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 16a93198-5cb7-47c9-83d2-10f1a57f2d2c # OrganisationName
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ce4d64f-c77a-4054-9241-13f8db34cb8c # Street
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7b23c792-f58b-47aa-beac-b4246f230f2b # Housenumber
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 697893d6-3d38-44f2-ab68-5991cdec0234 # Zip
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c2a99aeb-0a21-4ade-a0ed-57d043e41517 # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ab9dbe60-5ede-48a7-8b96-1a5658f0c47b # Country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e3a810ef-a987-4fe1-b8a1-170c2678a5cb # Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c56fca23-af30-4596-9f6a-8914953c66b3 # Fullname
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f6025814-bb10-4540-9603-263d5a4cf843 # Telephone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8a472db7-8308-4bc6-a029-33d177091147 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7d95f03f-b8aa-42f3-b77d-97d30ee0d3fb # Diseases
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4a9f13bd-2fd5-4cef-b18b-933aa0a072b7 # Services
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 396b126b-3e2f-43e8-9bf7-3906a320eab6 # Collaboration
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2c490cea-b3b6-42bc-8b1d-a90245164950 # Collaboration Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89b0d77e-3e97-411b-8da9-279ba16d694e # Projects
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: detailExpert
+hasTitleField: false
+name: 'Detail Expert'
+section: 8686965a-70d6-43fa-9981-0c699bc62f2a # Detail Expert
+sortOrder: 1
+titleFormat: '{dateCreated|date(''d-m-Y H:i:s'')}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,159 @@
+field: bb07bbf1-4062-4674-9e9d-40a6721527cc # Practical Info
+fieldLayouts:
+  5f5594c8-920b-4e44-be7a-4740e4eacbc5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e9e5f67b-114a-444f-9b0f-02033284e682 # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a3951b93-94d7-4c2e-bd85-7ecae03b8b40 # Date Range
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a97223fc-3a46-48f5-ac3d-b6939ce80649 # Location
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: aceac6c2-143a-48cf-acab-2d2b28c5c425 # Price
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e3032029-4031-4957-86ad-41cad779560c # More Info
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a3951b93-94d7-4c2e-bd85-7ecae03b8b40: # Date Range
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: dateRange
+    instructions: ''
+    name: 'Date Range'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  a97223fc-3a46-48f5-ac3d-b6939ce80649: # Location
+    contentColumnType: text
+    fieldGroup: null
+    handle: location
+    instructions: ''
+    name: Location
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  aceac6c2-143a-48cf-acab-2d2b28c5c425: # Price
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: price
+    instructions: ''
+    name: Price
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: '0'
+      prefix: null
+      previewCurrency: ''
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  e9e5f67b-114a-444f-9b0f-02033284e682: # Titel
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e3032029-4031-4957-86ad-41cad779560c: # More Info
+    contentColumnType: text
+    fieldGroup: null
+    handle: moreInfo
+    instructions: ''
+    name: 'More Info'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: practicalInfo
+name: 'Practical Info'
+sortOrder: 1

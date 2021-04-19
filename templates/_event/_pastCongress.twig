@@ -1,0 +1,38 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<div class="bg-light py-10">
+<div class="section section--default">
+	<div class="container">
+    <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
+        {% include '_snippet/_content/_pageTitle' %}
+		{% include '_snippet/_content/_intro' %}
+    </div>
+</div>
+</div>
+
+<div class="section section--default">
+	<div class="container">
+        <div class="flex -mx-4">
+                {% set events = craft.entries.section('eventUpcomingDetail').isPast('practicalInfoDate') %}
+                {% for event in events %}
+            <div class="w-1/3 mx-4 mt-5">
+                <div class="rounded bg-light">
+                    <div class="bg-cover aspect-ratio-16/9 js-bg-target">
+                        <img src="{{ event.image.one().url }}" alt="" class="js-bg-src"/>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="mt-2 text-primary">{{ event.practicalInfoTitle }}</h2>
+                        <p>{{ event.practicalInfoCountry }}</p>
+                        <p>{{ event.practicalInfoDate.formatted('M d, Y') }}</p>
+                        <p class="pb-5">{{ event.practicalInfoMoreInfo }}</p>
+                        <a class="link link--primary link--ext" href="{{ event.url }}">Read more</a>
+                    </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
