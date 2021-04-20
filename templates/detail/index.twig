@@ -1,5 +1,0 @@
-{% set details = craft.entries.section('detailExpert') %}
-{% for detail in details %}
-{% set type = detail.typeOrganisation.one() %}
-{{ type.title }}
-{% endfor %}

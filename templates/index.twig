@@ -61,10 +61,12 @@
             {% for project in projects %}
                 <div class="group w-1/2">
                 <div class="group-hover:shadow-xl border border-primary mr-5 px-5 py-5 h-full">
+                    <a href="{{ project.url }}">
                     <h2 class="text-primary">{{ project.title }}</h2>
                     <p>{{ project.projectLead }}</p>
                     <p>{{ project.intro }}</p>
                     <a class="link link--primary link--ext" href="{{ project.url }}">Read more</a>
+                    </a>
                 </div>
                 </div>
             {% endfor %}

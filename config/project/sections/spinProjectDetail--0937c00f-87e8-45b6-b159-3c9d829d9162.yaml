@@ -19,15 +19,15 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _unmet/_project
-    uriFormat: 'spin-project-detail/{slug}'
+    uriFormat: '{slug}/{slug}'
   e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
     enabledByDefault: true
     hasUrls: true
     template: _unmet/_project
-    uriFormat: 'spin-project-detail/{slug}'
+    uriFormat: spin-project-detail
   fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
     enabledByDefault: true
     hasUrls: true
     template: _unmet/_project
-    uriFormat: 'spin-project-detail/{slug}'
+    uriFormat: spin-project-detail
 type: channel
