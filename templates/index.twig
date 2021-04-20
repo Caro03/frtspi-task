@@ -2,15 +2,14 @@
 
 {% block content %}
 
-<div class="bg-center bg-cover hero js-bg-target px-10 py-10">
+<div class="px-10 py-10 bg-center bg-cover hero bg-light js-bg-target">
     <div class="section section--default">
         <div class="container">
-        <div class="mb-5">{% include '_snippet/_nav/_breadcrumb' %}</div>
             <div class="w-full md:w-3/4">
                 {% include '_snippet/_content/_pageTitle' %}
                 {% include '_snippet/_content/_intro' %}
                 {% include '_snippet/_item/_home' %}
-                <a class="btn btn--secondary btn--ext mb-5 mr-4 mt-5" href="#">Expand your knowledge</a>
+                <a class="mt-5 mb-5 mr-4 btn btn--secondary btn--ext" href="#">Expand your knowledge</a>
                 <a class="btn btn--primary btn--ext" href="#">Join our research</a>
             </div>
         </div>
@@ -19,7 +18,7 @@
 
 <div class="section section--default">
 	<div class="container">
-    <div class="text-white bg-center bg-cover hero js-bg-target px-10 py-10">
+    <div class="px-10 py-10 text-white bg-center bg-cover hero js-bg-target">
         {% set newEvent = craft.entries.section('eventUpcomingDetail').isFuture('practicalInfoDate').limit(1) %}
         {% for new in newEvent %}
             {% include '_snippet/_item/_congress' %}
@@ -34,7 +33,7 @@
         <div class="flex flex-wrap -mx-4">
             {% set records = craft.entries.section('knowledgeCenterDetail').relatedTo(entry.congress).limit(6) %}
             {% for record in records %}
-            {% include '_snippet/_item/_recording' %}
+                {% include '_snippet/_item/_recording' %}
             {% endfor %}
         </div>
     </div>
@@ -42,12 +41,12 @@
 
 <div class="section section--default">
 	<div class="container">
-        <div class="bg-light py-10 text-center">
-			<h2 class="text-primary">Unmet needs</h2>
+        <div class="p-10 text-center bg-light">
+			<h2 class="mb-0 text-primary">Unmet needs</h2>
 			{% set diseases = craft.entries.section('unmetNeedsDisease').relatedTo(entry.diseases) %}
 			{% for disease in diseases %}
 			{% set category = disease.diseases.one() %}
-				<a class="btn btn--primary btn--ext mr-5" href="{{ disease.url }}">{{ category.title }}</a>
+				<a class="mt-5 mr-5 btn btn--primary btn--ext" href="{{ disease.url }}">{{ category.title }}</a>
 			{% endfor %}
 		</div>
 	</div>
@@ -55,19 +54,25 @@
 
 <div class="section section--default">
 	<div class="container">
-    <h2 class="text-primary">Advancing projects</h2>
-    <div class="flex">
+        <h2 class="text-primary">{{ 'Advancing projects'|t }}</h2>
+        <div class="flex flex-wrap -mx-4">
             {% set projects = craft.entries.section('spinProjectDetail').limit(2) %}
             {% for project in projects %}
-                <div class="group w-1/2">
-                <div class="group-hover:shadow-xl border border-primary mr-5 px-5 py-5 h-full">
-                    <a href="{{ project.url }}">
-                    <h2 class="text-primary">{{ project.title }}</h2>
-                    <p>{{ project.projectLead }}</p>
-                    <p>{{ project.intro }}</p>
-                    <a class="link link--primary link--ext" href="{{ project.url }}">Read more</a>
-                    </a>
-                </div>
+                <div class="w-full px-4 mt-8 sm:mt-0 sm:w-1/2">
+                    <div class="relative h-full px-5 py-5 transition duration-300 ease-in-out border group hover:shadow-xl border-primary">
+                        <h2 class="text-primary">
+                            <a class="link--extended" href="{{ project.url }}">{{ project.title }}</a>
+                        </h2>
+                        {% if project.projectLead|length %}
+                            <div class="mb-2">{{ project.projectLead }}</div>
+                        {% endif %}
+                        {% if project.intro|length %}
+                            <div class="mb-4">
+                                {{ project.intro }}
+                            </div>
+                        {% endif %}
+                        <span class="link link--primary link--ext group-hover:no-underline">{{ 'Read more'|t }}</span>
+                    </div>
                 </div>
             {% endfor %}
         </div>

@@ -1,9 +1,9 @@
-<div class="bg-primary px-10 py-5">
+<div class="p-6 sm:p-10 bg-primary">
     <h3 class="text-white xl:w-64 sm:w-56">Subscribe to our newsletter</h3>
-    <p class="text-white xl:w-64 sm:w-56 pb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+    <p class="pb-4 text-white xl:w-64 sm:w-56">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     {{ craft.freeform.form("newsletter", {
         labelClass: "form__label text-white",
-        inputClass: "form__input xl:w-64 sm:w-56 md:w-40",
+        inputClass: "form__input",
         submitClass: "btn btn--primary btn--ext"
     }).render() }}
 </div>

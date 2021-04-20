@@ -82,7 +82,7 @@ module.exports = {
     },
   },
   variants: {
-    boxShadow: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
+    textDecoration: ({ after }) => after(['group-hover']),
   },
   plugins: [
     colorShade(siteColors),

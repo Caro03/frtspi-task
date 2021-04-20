@@ -5,7 +5,7 @@
   }
 
   &__input {
-    @apply w-2/5 px-3 py-2 mb-5 leading-tight text-gray-700 border rounded shadow appearance-none;
+    @apply w-full px-3 py-2 mb-5 leading-tight text-gray-700 border rounded shadow appearance-none;
   }
 
   &__error {

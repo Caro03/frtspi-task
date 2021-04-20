@@ -4,7 +4,7 @@
     &:before {
         content: '';
         left: 100%;
-        @apply block w-full absolute bg-light top-0 bottom-0 h-full;
+        @apply absolute top-0 bottom-0 block w-screen h-full bg-light;
     }
 }
 
@@ -23,7 +23,7 @@
     &:after {
         content: attr(data-tooltip);
         left: 2.5em;
-        @apply absolute bg-white px-5 py-2 text-xs w-64 text-black;
+        @apply absolute w-64 px-5 py-2 text-xs text-black bg-white;
     }
 }
 /* purgecss end ignore */
