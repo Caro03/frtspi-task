@@ -1,7 +1,7 @@
 {% set doormatNav = craft.navigate.raw('doormatServiceNav') %}
 {% if doormatNav|length %}
     <nav class="" aria-label="{{ 'Footer'|t }}">
-        <ul class="mt-5 text-sm">
+        <ul class="mt-5 text-sm xs:mb-5">
             {% for node in doormatNav %}
                 {% if node.type == 'heading' %}
                     <li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
