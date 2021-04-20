@@ -3,7 +3,7 @@
 
 {% if mainNav|length %}
 	<nav class="" aria-label="{{ 'Main'|t }}">
-		<ul class="md:flex md:flex-row md:flex-wrap md:space-x-10 lg:space-x-20 sm:flex sm:space-x-0 sm:flex-col sm:mt-10 sm:mb-5 sm:space-y-2">
+		<ul class="md:flex md:flex-row md:flex-wrap md:space-x-10 md:space-y-0 lg:space-x-20 sm:flex sm:space-x-0 sm:flex-col sm:mb-5 sm:space-y-2">
 			{% for node in mainNav %}
 				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
 					<a href="{{ node.url }}" class="text-xl text-primary hover:text-secondary {% if node.active %}text-secondary{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
