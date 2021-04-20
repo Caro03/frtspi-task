@@ -58,7 +58,7 @@
             {% endfor %}
         </div>
             <div class="flex -mx-4">
-                {% set UpcomingEvent = craft.entries.section('eventUpcomingDetail').id('not ' ~ entry.id).limit(3) %}
+                {% set UpcomingEvent = craft.entries.section('eventUpcomingDetail').isPast('practicalInfoDate').id('not ' ~ entry.id).limit(3) %}
                 {% for upcoming in UpcomingEvent %}
                     {% include '_snippet/_item/_event' %}
                 {% endfor %}
